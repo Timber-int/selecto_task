@@ -16,9 +16,9 @@ function isSimpleNumber(num) {
 
 function fiendFirstAndLastSimpleNumber(num1, num2) {
     const array = [];
+    if (num2 - num1 > 30 || num1 > num2) return;
 
     for (let i = num1; i <= num2; i++) {
-        if (num2 - num1 > 30) return;
         if (isSimpleNumber(i)) {
             array.push(i);
         }
@@ -26,7 +26,7 @@ function fiendFirstAndLastSimpleNumber(num1, num2) {
 
     return {
         firstNumber: array[0],
-        lastNumber: array[array.length-1]
+        lastNumber: array[array.length - 1]
     };
 }
 
